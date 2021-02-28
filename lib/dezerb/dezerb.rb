@@ -151,7 +151,7 @@ module Dezerb
         f = funcs.pop
         gys = f.outputs.map {|output| output.grad}
 
-        using_config('enable_backprop', create_graph) do
+        Dezerb.using_config('enable_backprop', create_graph) do
           gxs = f.backward(*gys)
           unless gxs.instance_of? Array
             gxs = [gxs]
@@ -209,7 +209,7 @@ module Dezerb
       unless ys.instance_of? Array
         ys = [ys]
       end
-      outputs = ys.map {|y| Variable.new(as_array(y))}
+      outputs = ys.map {|y| Variable.new(Dezerb.as_array(y))}
       
       if Config.enable_backprop
         @generation = inputs.max {|a, b| a.generation <=> b.generation}.generation
