@@ -1,6 +1,7 @@
 # Dezerb
 
 Deep learning framework for Ruby based on [DeZero](https://github.com/oreilly-japan/deep-learning-from-scratch-3).
+
 This framework internally uses [Numo::NArray](https://github.com/ruby-numo/numo-narray) as a library of multidimensional arrays.
 
 ## Installation
