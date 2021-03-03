@@ -8,8 +8,6 @@ F = Functions
 
 x = Numo::DFloat.new(100, 1).rand
 y = 5 + 2 * x + Numo::DFloat.new(100, 1).rand
-#x = Variable.new train_x
-#y = Variable.new train_y
 
 w = Variable.new(Numo::DFloat.zeros 1, 1)
 b = Variable.new(Numo::DFloat.zeros 1)
