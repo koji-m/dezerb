@@ -198,6 +198,8 @@ module Dezerb
     end
   end
 
+  class Parameter < Variable
+  end
   
   class Function
     attr_accessor :inputs, :outputs, :generation
