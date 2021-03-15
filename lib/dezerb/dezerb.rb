@@ -25,7 +25,7 @@ module Dezerb
   end
 
   def as_variable(obj)
-    if obj.instance_of? Variable
+    if obj.is_a? Variable
       obj
     else
       Variable.new(obj)
